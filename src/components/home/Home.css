@@ -1,0 +1,752 @@
+/* Base Styles */
+.home {
+  margin: 40px !important;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: #fff !important;
+  overflow: hidden;
+  position: relative;
+
+}
+
+/*  */
+
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Image Styles */
+.home-img {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 4px #0DBBFF,
+    0 0 30px #0DBBFF !important;
+  animation: float 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.home-img:hover {
+  box-shadow: 0 0 0 8px #0DBBFF,
+    0 0 40px #0DBBFF !important;
+}
+
+.home-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.home-img:hover img {
+  transform: scale(1.05);
+}
+
+/* Content Styles */
+.home-content {
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+  opacity: 0;
+
+}
+
+.greeting {
+  display: block;
+  font-size: 1.25rem;
+  color: #0DBBFF !important;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.name {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  margin: 0.5rem 0;
+  color: #fff !important;
+  font-weight: 700;
+  line-height: 1.1;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.role {
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
+  color: #8892b0;
+  font-weight: 500;
+  margin: 1.5rem 0;
+  min-height: 2.5rem;
+}
+
+/* Typing Animation */
+.typing-text {
+  color: #0DBBFF !important;
+  position: relative;
+  display: inline-block;
+}
+
+.typing-text::after {
+  content: '|';
+  position: absolute;
+  right: -8px;
+  animation: blink 1s infinite;
+  color: #0DBBFF !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Typing effect animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+
+  .home-content {
+    text-align: left;
+  }
+
+  .home-img {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 1rem !important;
+  }
+
+  .greeting {
+    font-size: 1rem;
+  }
+
+  .role {
+    margin: 1rem 0;
+  }
+}
+
+/* Home.css */
+
+/* Base Styles */
+.home {
+  margin: 40px !important;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: #fff !important;
+  overflow: hidden;
+  position: relative;
+}
+
+/*  */
+
+.home-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Image Styles */
+.home-img {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 4px #0DBBFF,
+    0 0 30px #0DBBFF !important;
+  animation: float 6s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.home-img:hover {
+  box-shadow: 0 0 0 8px #0DBBFF,
+    0 0 40px #0DBBFF !important;
+}
+
+.home-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.home-img:hover img {
+  transform: scale(1.05);
+}
+
+/* Content Styles */
+.home-content {
+  text-align: center;
+  animation: fadeInUp 1s ease-out 0.2s forwards;
+  opacity: 0;
+}
+
+.greeting {
+  display: block;
+  font-size: 1.25rem;
+  color: #0DBBFF !important;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0;
+}
+
+.name {
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  margin: 0.5rem 0;
+  color: #fff !important;
+  font-weight: 700;
+  line-height: 1.1;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+  opacity: 0;
+}
+
+.role {
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
+  color: #fff !important;
+  font-weight: 500;
+  margin: 1.5rem 0;
+  min-height: 2.5rem;
+}
+
+/* Typing Animation */
+.typing-text {
+  color: #0DBBFF !important;
+  position: relative;
+  display: inline-block;
+}
+
+.typing-text::after {
+  content: '|';
+  position: absolute;
+  right: -8px;
+  animation: blink 1s infinite;
+  color: #0DBBFF !important;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Typing effect animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+  }
+
+  .home-content {
+    text-align: left;
+  }
+
+  .home-img {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 1.5rem;
+  }
+
+  .greeting {
+    font-size: 1rem;
+  }
+
+  .role {
+    margin: 1rem 0;
+  }
+}
+
+/* About Text Styles */
+.about-text {
+  font-size: clamp(1rem, 1.1vw, 1.2rem);
+  /* Responsive font size */
+  line-height: 1.8;
+  color: #fff !important;
+  /* Soft blue-gray */
+  margin: 1.5rem 0;
+  padding: 0;
+  font-weight: 400;
+  text-align: justify;
+  position: relative;
+  animation: fadeIn 1s ease-out 0.3s both;
+  opacity: 0;
+  max-width: 800px;
+}
+
+/* First letter styling */
+.about-text::first-letter {
+  font-size: 1.5em;
+  color: #0DBBFF;
+  /* Teal accent */
+  font-weight: 600;
+  padding-right: 2px;
+}
+
+/* Highlight important phrases */
+.about-text strong {
+  color: #fff !important;
+  /* Light text color */
+  font-weight: 500;
+  position: relative;
+}
+
+.about-text strong::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #0DC0FF !important;
+  /* Accent color */
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.about-text strong:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animation for text appearance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-text {
+    text-align: left;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .about-text::first-letter {
+    font-size: 1.3em;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+/* Social and Buttons Container */
+.social-and-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+  opacity: 0;
+}
+
+/* Social Icons Styles */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #0DBBFF;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #0DBBFF;
+  text-decoration: none;
+}
+
+.social-icons a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: #0d1b2a;
+  /* dark text for contrast on bright bg */
+  box-shadow: 0 5px 15px rgba(13, 187, 255, 0.5);
+}
+
+.social-icons a:hover svg {
+  color: white;
+  /* Ensures white icon on hover */
+}
+
+.social-icons a:hover::before {
+  left: 100%;
+}
+
+
+/* Button Container Styles */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Base Button Styles */
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Hire Me Button */
+.hire-btn {
+  background: #0DBBFF;
+  color: #0a192f !important;
+  border: 1px solid #0a192f;
+  font-weight: 600;
+}
+
+.hire-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.hire-btn:hover {
+  color: #0DBBFF !important;
+}
+
+.hire-btn:hover::before {
+  width: 100%;
+}
+
+/* Contact Me Button */
+.contact-btn {
+  background: transparent;
+  color: #0DBBFF !important;
+  border: 1px solid #0DBBFF;
+}
+
+.contact-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-color: #0DBBFF !important;
+
+  width: 0;
+  height: 100%;
+  z-index: -1;
+  transition: width 0.3s ease;
+}
+
+.contact-btn:hover {
+  color: #0a192f !important;
+  border-color: #0DBBFF !important;
+  background-color: #fff;
+}
+
+.contact-btn:hover::before {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .social-and-buttons {
+    gap: 1.5rem;
+  }
+
+  .social-icons {
+    gap: 1rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .home-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Typing Animation */
+.typing-text {
+  color: #0DBBFF !important;
+  position: relative;
+  display: inline-block;
+}
+
+.typing-cursor {
+  animation: blink 1s infinite;
+  color: #0DBBFF !important;
+  margin-left: 2px;
+}
+
+/* Blink animation for cursor */
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Typing effect animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+/* Scroll-triggered and load animations */
+.home {
+  margin: 40px !important;
+  padding: 4rem 2rem;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  color: #fff !important;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Animation classes */
+.home-img {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.6s ease-out;
+}
+
+.home-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+/* Delay for each element */
+.greeting { transition-delay: 0.2s; }
+.name { transition-delay: 0.4s; }
+.role { transition-delay: 0.6s; }
+.about-text { transition-delay: 0.8s; }
+.social-and-buttons { transition-delay: 1s; }
+
+/* Active class that gets added when element is in view */
+.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Initial load animation */
+@keyframes initialLoad {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply to elements you want to animate on load */
+.initial-animate {
+  animation: initialLoad 0.8s ease-out forwards;
+}
+
+/* Specific delays for initial load */
+.home-img.initial-animate { animation-delay: 0.2s; }
+.greeting.initial-animate { animation-delay: 0.4s; }
+.name.initial-animate { animation-delay: 0.6s; }
+.role.initial-animate { animation-delay: 0.8s; }
+.about-text.initial-animate { animation-delay: 1s; }
+.social-and-buttons.initial-animate { animation-delay: 1.2s; }
+

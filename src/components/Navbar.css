@@ -1,0 +1,40 @@
+/* Link underline animation */
+.custom-nav-link {
+  position: relative;
+  color: white !important;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.custom-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+.custom-nav-link:hover::after {
+  width: 100%;
+}
+
+/* CV Button Style */
+.my-cv-button {
+  background-color: #D81359;
+  border: white 2px solid;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  transition: background-color 0.3s ease;
+  /* width: 120px !important; */
+}
+.my-cv-button:hover {
+  background-color: #C7124B;
+}
+@media (min-width: 792px) {
+  .my-cv-button {
+    width: 150px !important;
+  }
+}

@@ -1,0 +1,177 @@
+/* === Base Section === */
+.skills-section {
+  padding: 4rem 1.5rem;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.skills-section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Section Title === */
+.section-title {
+  font-size: 2.5rem;
+  text-align: start;
+  font-weight: bold;
+  color: #0dbbff;
+  position: relative;
+  margin-bottom: 0.5rem !important;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.skills-section.animate .section-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title .highlight {
+  color: #0dbbff;
+}
+
+/* === Underline Animation === */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #0dbbff;
+  margin: 0.1rem !important;
+  transition: width 0.8s ease 0.4s;
+}
+
+.skills-section.animate .section-title::after {
+  width: 60px;
+}
+
+/* === Skill Category === */
+.skill-category {
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.skills-section.animate .skill-category {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.category-title {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #fff;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.skills-section.animate .category-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.category-title::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #0dbbff;
+  margin: 0.6rem auto 0;
+  border-radius: 50px;
+  transition: width 0.8s ease;
+}
+
+.skills-section.animate .category-title::after {
+  width: 60px;
+}
+
+/* === Skills Grid === */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === Individual Skill Card === */
+.skill-item {
+  border-radius: 10px;
+  padding: 1.2rem 0.8rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: none;
+}
+
+.skills-section.animate .skill-item {
+  animation: zoomIn 0.5s ease forwards;
+}
+
+.skill-item:hover {
+  transform: translateY(-6px) scale(1);
+  box-shadow: 0 8px 25px rgba(13, 187, 255, 0.2);
+}
+
+/* === Icon Styling === */
+.skill-icon-container {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+/* === Skill Name === */
+.skill-name {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #d4d4d4;
+}
+
+/* === Animations === */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    gap: 1rem;
+  }
+
+  .skill-name {
+    font-size: 0.85rem;
+  }
+}
+
+.highlight {
+  color: #0dbbff !important;
+  font-weight: bold;
+  text-decoration-color: #0dbbff;
+  font-size: 48px;
+}

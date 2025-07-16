@@ -1,0 +1,243 @@
+/* === Base Section === */
+.about-section {
+  color: #ffffff;
+  padding: 4rem 1.5rem;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === Grid Layout === */
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (min-width: 768px) {
+  .about-grid {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* === Text Content === */
+.about-text {
+  flex: 1;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  color: #fff !important;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.75rem !important ;
+  margin-top: 1.5rem;
+  color: #00b4d8 !important;
+  margin-bottom: 1rem;
+  opacity: 1 !important;
+  text-decoration: underline #0dbbff;
+  font-weight: 600 !important;
+}
+
+.about-paragraph {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  color: #d4d4d4;
+}
+
+.about-highlight {
+  color: #0dbbff;
+  font-weight: 600;
+}
+
+/* === Image === */
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.about-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #0dbbff;
+  box-shadow: 0 0 20px rgba(13, 187, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* === List === */
+.about-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.about-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.7rem;
+  color: #e0e0e0;
+}
+
+.about-icon {
+  font-size: 1.2rem;
+  margin-top: 3px;
+  color: #0dbbff;
+}
+
+/* === Tabs === */
+.about-tabs {
+  display: flex;
+  gap: 1rem;
+  margin: 3rem 0 1rem;
+  border-bottom: 1px solid rgba(13, 187, 255, 0.2);
+  padding-bottom: 1rem;
+}
+
+.tab-btn {
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border: none;
+  color: #d4d4d4;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  position: relative;
+  bottom: -1px;
+}
+
+.tab-btn:hover {
+  color: #0dbbff;
+  background: rgba(13, 187, 255, 0.1);
+}
+
+.tab-btn.active {
+  color: #0d1b2a;
+  background: #0dbbff;
+  border-bottom: 3px solid #0d1b2a;
+}
+
+.tab-content {
+  min-height: 200px;
+  padding: 2rem 0;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Buttons === */
+.about-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.about-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.about-btn {
+  background-color: #0dbbff;
+  color: #0d1b2a;
+  padding: 10px 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background-color: #0d1b2a;
+  color: #ffffff !important;
+}
+
+.about-btn.secondary {
+  background: transparent;
+  color: #0dbbff;
+  border: 2px solid #0dbbff;
+}
+
+.about-btn.secondary:hover {
+  background-color: #ffffff;
+  color: #0d1b2a !important;
+}
+
+/* === Social Icons === */
+.about-socials {
+  display: flex;
+  gap: 1.5rem;
+  animation: fadeInUp 0.8s ease-out 0.6s both;
+  opacity: 0;
+}
+
+.about-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #0DBBFF;
+  text-decoration: none;
+  color: white !important;
+}
+
+.about-socials a:hover {
+  transform: translateY(-5px);
+  color: #0d1b2a;
+  box-shadow: 0 5px 15px rgba(13, 187, 255, 0.5);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
