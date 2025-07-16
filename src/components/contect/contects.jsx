@@ -76,21 +76,21 @@ const Contact = () => {
               <FaEnvelope className="contact-icon" />
               <div>
                 <h3>Email</h3>
-                <p>your.email@example.com</p>
+                <p>shreyshahworldtech@gmail.com</p>
               </div>
             </div>
             <div className="contact-info-item">
               <FaPhone className="contact-icon" />
               <div>
                 <h3>Phone</h3>
-                <p>+1 (123) 456-7890</p>
+                <p>+91 9265075114</p>
               </div>
             </div>
             <div className="contact-info-item">
               <FaMapMarkerAlt className="contact-icon" />
               <div>
                 <h3>Location</h3>
-                <p>Your City, Country</p>
+                <p>Gujarat, India</p>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import cv from "../../assets/Shrey shah.pdf"
+import cv from "../../assets/Shrey shah.pdf";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebookF,
@@ -81,8 +81,8 @@ const AboutMe = () => {
               <h3 className="section-subtitle">What I Do:</h3>
               <ul className="about-list">
                 <li>
-                  <FaCheckCircle className="about-icon" /> Build dynamic web apps
-                  using React.js and Node.js
+                  <FaCheckCircle className="about-icon" /> Build dynamic web
+                  apps using React.js and Node.js
                 </li>
                 <li>
                   <FaCheckCircle className="about-icon" /> Design responsive
@@ -93,8 +93,8 @@ const AboutMe = () => {
                   MongoDB for server-side logic
                 </li>
                 <li>
-                  <FaCheckCircle className="about-icon" /> Collaborate via GitHub,
-                  follow best practices, and write clean code
+                  <FaCheckCircle className="about-icon" /> Collaborate via
+                  GitHub, follow best practices, and write clean code
                 </li>
                 <li>
                   <FaCheckCircle className="about-icon" /> Solve DSA problems to
@@ -130,8 +130,8 @@ const AboutMe = () => {
               <p className="about-paragraph">
                 When I'm not coding, I'm most likely singing or playing musical
                 instruments like the keyboard or guitar. Music keeps me balanced
-                and sparks creativity. I believe great developers blend logic and
-                creativity — and I bring both to the table.
+                and sparks creativity. I believe great developers blend logic
+                and creativity — and I bring both to the table.
               </p>
               <p className="about-paragraph">
                 I'm currently looking for opportunities to work on exciting
@@ -145,25 +145,46 @@ const AboutMe = () => {
         {/* Buttons and Socials */}
         <div className="about-actions">
           <div className="about-buttons">
-            <a href={cv} download className="about-btn">
+            <a
+              href="/Shrey Shah.pdf"
+              download="Shrey_Shah_Resume.pdf"
+              className="about-btn"
+            >
               Download Resume
             </a>
+
             <a href="#contact" className="about-btn secondary">
               Hire Me
             </a>
           </div>
 
           <div className="about-socials">
-            <Link to="https://www.facebook.com/share/17CgMCFuiz/" target="_blank" rel="noopener noreferrer">
+            <Link
+              to="https://www.facebook.com/share/17CgMCFuiz/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faFacebookF} />
             </Link>
-            <Link to="https://github.com/shrey7505" target="_blank" rel="noopener noreferrer">
+            <Link
+              to="https://github.com/shrey7505"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faGithub} />
             </Link>
-            <Link to="https://www.instagram.com/shrey_shah_sjs/" target="_blank" rel="noopener noreferrer">
+            <Link
+              to="https://www.instagram.com/shrey_shah_sjs/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </Link>
-            <Link to="https://www.linkedin.com/in/shrey7505/" target="_blank" rel="noopener noreferrer">
+            <Link
+              to="https://www.linkedin.com/in/shrey7505/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </Link>
           </div>
