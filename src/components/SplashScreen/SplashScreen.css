@@ -1,0 +1,210 @@
+/* Base Layout */
+.splash-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Background Particles */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.particle {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  top: var(--y);
+  left: var(--x);
+  opacity: 0;
+  animation: particle-float var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
+  filter: blur(1px);
+}
+
+@keyframes particle-float {
+  0%, 100% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(calc(var(--size) * 10), calc(var(--size) * -10));
+    opacity: 0.6;
+  }
+}
+
+/* Logo Section */
+.logo-container {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.logo-wrapper {
+  position: relative;
+  z-index: 0;
+}
+
+.logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  transform: scale(0);
+  opacity: 0;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+   border: 2px solid white;
+   border-radius: 50%;
+}
+
+.splash-screen.logo-in .logo {
+  animation:
+    logo-pop-in 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards,
+    logo-float 3s ease-in-out infinite 1s;
+}
+
+.splash-screen.logo-out .logo {
+  animation:
+    logo-pop-out 1s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards;
+}
+
+@keyframes logo-pop-in {
+  0% { transform: scale(0); opacity: 0; }
+  80% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes logo-pop-out {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes logo-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-20px) scale(1.03); }
+}
+
+/* Aura Around Logo */
+.logo-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(100, 200, 255, 0.4) 0%, rgba(100, 200, 255, 0) 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(15px);
+  opacity: 0;
+  z-index: -1;
+}
+
+.splash-screen.logo-in .logo-aura {
+  animation:
+    aura-fade-in 1s ease-out forwards,
+    aura-pulse 3s ease-in-out infinite 1s;
+}
+
+@keyframes aura-fade-in {
+  to { opacity: 0.8; }
+}
+
+@keyframes aura-pulse {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+  50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.9; }
+}
+
+/* Ring Around Logo */
+.particle-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0 !important;
+}
+
+.splash-screen.logo-in .particle-ring {
+  animation:
+    ring-expand 2s cubic-bezier(0.4, 0, 0.2, 1) forwards,
+    ring-rotate 20s linear infinite;
+}
+
+@keyframes ring-expand {
+  to { transform: scale(1.5); opacity: 0.6; }
+}
+
+@keyframes ring-rotate {
+  to { transform: scale(1.5) rotate(360deg); }
+}
+
+/* Name Reveal */
+.name-wrapper {
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.splash-screen.name-reveal .name-wrapper {
+  animation:
+    name-fade-in 1s ease-out forwards,
+    name-float 3s ease-in-out infinite;
+}
+
+.name {
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff8a00, #e52e71, #9b22ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+.name-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 100px;
+  background: radial-gradient(circle, rgba(155, 34, 255, 0.4) 0%, rgba(155, 34, 255, 0) 70%);
+  filter: blur(30px);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 1;
+}
+
+.splash-screen.name-reveal .name-glow {
+  animation: glow-fade-in 1.5s ease-out forwards;
+}
+
+@keyframes name-fade-in {
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes name-float {
+  0%, 100% { transform: scale(1) translateY(0); }
+  50% { transform: scale(1.03) translateY(-10px); }
+}
+
+@keyframes glow-fade-in {
+  to { opacity: 0.6; }
+}
