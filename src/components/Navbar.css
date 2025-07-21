@@ -6,6 +6,7 @@
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
 .custom-nav-link::after {
   content: "";
   position: absolute;
@@ -16,6 +17,7 @@
   background-color: white;
   transition: width 0.3s ease;
 }
+
 .custom-nav-link:hover::after {
   width: 100%;
 }
@@ -30,11 +32,43 @@
   transition: background-color 0.3s ease;
   /* width: 120px !important; */
 }
+
 .my-cv-button:hover {
   background-color: #C7124B;
 }
+
 @media (min-width: 792px) {
   .my-cv-button {
     width: 150px !important;
   }
+}
+
+
+/* Style the navbar toggle button */
+.navbar-toggler {
+  border: 2px solid white;
+  /* Remove border */
+  padding: 5px 10px !important;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* The three-line icon inside the button */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-size: 100% 100%;
+  width: 24px;
+  height: 24px;
+}
+
+/* On hover */
+.navbar-toggler:hover {
+  box-shadow: 0 0 5px #0DC0FF;
+}
+
+/* When the button is active (clicked) */
+.navbar-toggler:focus,
+.navbar-toggler[aria-expanded="true"] {
+  outline: none;
+  box-shadow: 0 0 0 2px #0DC0FF;
 }

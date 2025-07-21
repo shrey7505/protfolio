@@ -3,13 +3,35 @@
   font-weight: 400;
   font-style: normal;
   background-color: #081D2C;
-  scroll-behavior: smooth !important;
+
 }
 
 html {
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
 }
 
 .port-class {
   color: #0DC0FF !important;
+}
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #081D2C;
+  border-radius: 5px;
+}
+
+/* Handle (thumb) */
+::-webkit-scrollbar-thumb {
+  background: #0DC0FF;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0aa2d6;
 }
