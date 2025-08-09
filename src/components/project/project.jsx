@@ -9,6 +9,7 @@ import collage_timetable from "../../assets/COLLEGE_TIMETABLE.pdf";
 import hotel_rating from "../../assets/Hotel-Management-and-Rating-System.pdf";
 import chat_app from "../../assets/chat-app-layout.pdf";
 import zerodha_clon from "../../assets/zerodha.pdf";
+import imagefy from "../../assets/imagefy.png";
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
   const projectsRef = useRef(null);
@@ -57,6 +58,26 @@ const Projects = () => {
       image: zerodha,
       github: "https://github.com/shrey7505/zerodha",
       live: zerodha_clon,
+    },
+    {
+      id: 5,
+      title: "Imagefy",
+      description:
+        "Imagefy is a powerful AI-powered platform that transforms text prompts into stunning, high-quality images in seconds. It offers a seamless experience with secure Razorpay integration for premium features, enabling users to generate and download ultra-high-resolution images effortlessly.",
+      tags: [
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "React.js",
+        "Material UI",
+        "Tailwind CSS",
+        "clipdrop API",
+        "Razorpay",
+      ],
+      category: "Full Stack",
+      image: imagefy,
+      github: "https://github.com/shrey7505/imagefy",
+      live: "https://imagefy-frontend.onrender.com/",
     },
   ];
 
